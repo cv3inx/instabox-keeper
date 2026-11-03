@@ -110,7 +110,7 @@ fi
 
 state="$(printf '%s' "$body" | jget state | tr '[:upper:]' '[:lower:]')"
 cooldown="$(jfirst "$body" cooldownUntil cooldown_until)"
-started_raw="$(jfirst "$body" startedAt started_at lastStartedAt last_started_at runStartedAt)"
+started_raw="$(jfirst "$body" runStartedAt run_started_at startedAt started_at lastStartedAt)"
 
 if [ -z "$state" ]; then
   echo "::error::cannot parse state; body=$(printf '%s' "$body" | head -c 300)"

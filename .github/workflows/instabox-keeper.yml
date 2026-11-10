@@ -30,7 +30,7 @@ jobs:
       - name: Run keeper
         env:
           INSTABOX_API_KEY: ${{ secrets.INSTABOX_API_KEY }}
-          MACHINE_ID: ${{ vars.INSTABOX_MACHINE_ID || 'm_agqztauvsenacuisvfppbogdle' }}
+          MACHINE_ID: ${{ vars.INSTABOX_MACHINE_ID || 'm_agq2un6dgudykjyt4ly2uvqehy' }}
           RUN_MINUTES: '470'   # 7 小时 50 分钟
           REST_MINUTES: '10'
         run: bash keeper.sh
